@@ -43,7 +43,7 @@ C) Inverter with stronger NMOS (Wp=2um; Wn=2um)
 # 5. Netlist Generation
 
 // Generated for: spectre
-simulator lang=spectre
+simulator lang=spectre /n
 global 0 vdd!
 parameters Vbias
 include "analog_labs/models/spectre/gpdk.scs" section=stat
