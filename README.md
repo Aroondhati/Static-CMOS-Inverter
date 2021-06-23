@@ -11,6 +11,37 @@ The contents are organized in the below metioned sequence.
 
 Softwares of Use: Cadence Virtuoso
 
-# Inverter Schematic
+# Background
+A simple inverter inverts the logically high input to low output and vice versa. It is of immense significance in clock generation, generation of delays, memories to store the data, improving the circuit's noise immunity, and much more. It is a simple two transistor device. For input 0, PMOS turns ON, and NMOS stays OFF. This charges the output capacitance, thus making output logic HIGH. Whereas for input 1, PMOS is OFF, and NMOS is ON. The charged capacitance now discharges, making output logic LOW. On a periodic application of pulse, an inverted pulse is obtained at the output. The in-depth analysis of the output on logic 0 to 1 at the input is summed up by its Voltage Transfer Characteristics (VTC).
 
+# 1. Inverter Schematic
 
+<img width="327" alt="Inverter Schematic" src="https://user-images.githubusercontent.com/59061427/123095880-277c6980-d44c-11eb-95e7-2a85430fdf51.PNG">
+
+# 2. Test Schematic 
+
+<img width="724" alt="Test Schematic" src="https://user-images.githubusercontent.com/59061427/123097233-8db5bc00-d44d-11eb-96cb-1bda38fa9550.PNG">
+
+# 3. Transient Analysis 
+
+<img width="824" alt="Output Waveform" src="https://user-images.githubusercontent.com/59061427/123097318-ab832100-d44d-11eb-91e8-2a85e8ddade3.PNG">
+
+# 4. DC Analysis: VTC Curve
+
+A) Electrically symmetric inverter (Wp=4um; Wn=2um)
+
+<img width="760" alt="VTC Curve wp=4u wn=2u" src="https://user-images.githubusercontent.com/59061427/123097452-c81f5900-d44d-11eb-8931-64a1b50ec908.PNG">
+
+B) Inverter with stronger PMOS (Wp=8um; Wn=2um)
+
+<img width="759" alt="VTC for Stronger PMOS wp=8u wn=2u" src="https://user-images.githubusercontent.com/59061427/123097515-d8cfcf00-d44d-11eb-8c09-a331b6831b3f.PNG">
+
+C) Inverter with stronger NMOS (Wp=2um; Wn=2um)
+
+<img width="760" alt="VTC for Stronger NMOS wp=2u wn=2u" src="https://user-images.githubusercontent.com/59061427/123097658-f866f780-d44d-11eb-968a-53687020be36.PNG">
+
+# 5. Netlist Generation
+(Work In Progress. Expected Spectre Netlist)
+
+# 6. Layout
+(Work In Progess with UMC Library)
