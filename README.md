@@ -65,6 +65,6 @@ saveOptions options save=allpub
 
 
 # 6. Layout
-(Work In Progess with UMC Library)
+(Work In Progess with UMC Library; DRC, LVS Checks)
 
 
