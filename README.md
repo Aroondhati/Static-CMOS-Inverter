@@ -54,7 +54,7 @@ subckt Inverter IN OUT
     PM0 (OUT IN vdd! vdd!) pmos1 w=(4u) l=180n as=2.4p ad=2.4p ps=9.2u \
         pd=9.2u m=(1)*(1)
 ends Inverter
-// End of subcircuit definition.
+// End of subcircuit definition
 
 I0 (net3 OUT) Inverter
 V1 (vdd! 0) vsource dc=5 type=dc
