@@ -41,7 +41,30 @@ C) Inverter with stronger NMOS (Wp=2um; Wn=2um)
 <img width="760" alt="VTC for Stronger NMOS wp=2u wn=2u" src="https://user-images.githubusercontent.com/59061427/123097658-f866f780-d44d-11eb-968a-53687020be36.PNG">
 
 # 5. Netlist Generation
-(Work In Progress. Expected Spectre Netlist)
+
+simulator lang=spectre
+global 0 vdd!
+include "/home/smriti/cadence/cadence_analog_labs_613/models/spectre/gpdk.scs" section=stat
+
+NM0 (OUT IN 0 0) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
+        m=(1)*(1)
+PM0 (OUT IN vdd! vdd!) pmos1 w=(4u) l=180n as=2.4p ad=2.4p ps=9.2u pd=9.2u \
+        m=(1)*(1)
+        
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub
+
 
 # 6. Layout
 (Work In Progess with UMC Library)
+
+
