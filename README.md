@@ -6,8 +6,9 @@ The contents are organized in the below metioned sequence.
 2. Test Schematic 
 3. Transient Analysis 
 4. DC Analysis: VTC Curve
-5. Netlist Generation
-6. Layout
+5. Frequency Modifications @ Temperature Sweep 
+6. Netlist Generation
+7. Layout
 
 Softwares of Use: Cadence Virtuoso
 
@@ -40,7 +41,9 @@ C) Inverter with stronger NMOS (Wp=2um; Wn=2um)
 
 <img width="760" alt="VTC for Stronger NMOS wp=2u wn=2u" src="https://user-images.githubusercontent.com/59061427/123097658-f866f780-d44d-11eb-968a-53687020be36.PNG">
 
-# 5. Netlist Generation
+# 5. Frequency Modifications @ Temperature Sweep 
+
+# 6. Netlist Generation
 
 // Generated for: spectre
 simulator lang=spectre
@@ -69,7 +72,7 @@ primitives info what=primitives where=rawfile
 subckts info what=subckts  where=rawfile
 saveOptions options save=allpub
 
-# 6. Layout
+# 7. Layout
 (Work In Progess with UMC Library; DRC, LVS Checks)
 
 
