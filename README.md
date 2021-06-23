@@ -43,7 +43,7 @@ C) Inverter with stronger NMOS (Wp=2um; Wn=2um)
 # 5. Netlist Generation
 
 // Generated for: spectre
-simulator lang=spectre /n
+simulator lang=spectre
 global 0 vdd!
 parameters Vbias
 include "analog_labs/models/spectre/gpdk.scs" section=stat
@@ -60,10 +60,7 @@ I0 (net3 OUT) Inverter
 V1 (vdd! 0) vsource dc=5 type=dc
 V0 (net3 0) vsource dc=Vbias type=dc
 C0 (OUT 0) capacitor c=10f
-simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
-    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
-    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
-    checklimitdest=psf 
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \ tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \ digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \ checklimitdest=psf 
 modelParameter info what=models where=rawfile
 element info what=inst where=rawfile
 outputParameter info what=output where=rawfile
