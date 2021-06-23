@@ -44,7 +44,7 @@ C) Inverter with stronger NMOS (Wp=2um; Wn=2um)
 
 simulator lang=spectre
 global 0 vdd!
-include "/home/smriti/cadence/cadence_analog_labs_613/models/spectre/gpdk.scs" section=stat
+include "analog_labs/models/spectre/gpdk.scs" section=stat
 
 NM0 (OUT IN 0 0) nmos1 w=(2u) l=180n as=1.2p ad=1.2p ps=5.2u pd=5.2u \
         m=(1)*(1)
