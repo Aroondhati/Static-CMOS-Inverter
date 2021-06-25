@@ -10,7 +10,7 @@ The contents are organized in the below metioned sequence.
 6. Layout
 7. Swap NMOS and PMOS: Transient Analysis, VTC
 
-Softwares of Use: Cadence Virtuoso
+Software of Use: Cadence Virtuoso
 
 # Background
 A simple inverter inverts the logically high input to low output and vice versa. It is of immense significance in clock generation, generation of delays, memories to store the data, improving the circuit's noise immunity, and much more. It is a simple two transistor device. For input 0, PMOS turns ON, and NMOS stays OFF. This charges the output capacitance, thus making output logic HIGH. Whereas for input 1, PMOS is OFF, and NMOS is ON. The charged capacitance now discharges, making output logic LOW. On a periodic application of pulse, an inverted pulse is obtained at the output. The in-depth analysis of the output on logic 0 to 1 at the input is summed up by its Voltage Transfer Characteristics (VTC).
