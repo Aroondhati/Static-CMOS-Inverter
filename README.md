@@ -8,6 +8,7 @@ The contents are organized in the below metioned sequence.
 4. DC Analysis: VTC Curve
 5. Netlist Generation
 6. Layout
+7. Swap NMOS and PMOS: Transient Analysis, VTC
 
 Softwares of Use: Cadence Virtuoso
 
@@ -71,5 +72,21 @@ saveOptions options save=allpub
 
 # 6. Layout
 (Work In Progess with UMC Library; DRC, LVS Checks)
+
+# 7. Swap NMOS and PMOS: Transient Analysis, VTC
+
+The circuit is modified by swapping NMOS and PMOS with each other. The expected behaviour of the circuit is a buffer with weak output logics. 
+
+Input and Output waveform for transient analysis:
+
+<img width="818" alt="Output Waveform" src="https://user-images.githubusercontent.com/59061427/123412772-9d5d0e00-d5cf-11eb-84e6-1a0b863aa091.PNG">
+
+Notably, we can observe reduction in the voltage swing as expected.
+
+VTC - Plot between input and output:
+
+<img width="755" alt="VTC" src="https://user-images.githubusercontent.com/59061427/123412816-a8b03980-d5cf-11eb-9a7c-c137d22600d8.PNG">
+
+
 
 
